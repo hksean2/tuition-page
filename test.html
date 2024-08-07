@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>補習介紹網</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2em 0;
+        }
+        .section {
+            background: white;
+            margin-bottom: 2em;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea, select {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 0.7em;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>補習介紹網</h1>
+</header>
+
+<div class="container">
+    <!-- 導師介紹 -->
+    <section class="section">
+        <h2>導師介紹</h2>
+        <p>在這裡你可以找到各類專業的導師，他們具備豐富的教學經驗和專業知識。</p>
+        <!-- 可以添加導師介紹的具體內容 -->
+    </section>
+
+    <!-- 導師登記 -->
+    <section class="section">
+        <h2>導師登記</h2>
+        <form id="teacher-registration">
+            <label for="teacher-name">姓名：</label>
+            <input type="text" id="teacher-name" name="teacherName" required>
+
+            <label for="teacher-subject">教授科目：</label>
+            <input type="text" id="teacher-subject" name="teacherSubject" required>
+
+            <label for="teacher-experience">教學經驗：</label>
+            <textarea id="teacher-experience" name="teacherExperience" rows="4" required></textarea>
+
+            <button type="submit">提交</button>
+        </form>
+    </section>
+
+    <!-- 學生登記 -->
+    <section class="section">
+        <h2>學生登記</h2>
+        <form id="student-registration">
+            <label for="student-name">姓名：</label>
+            <input type="text" id="student-name" name="studentName" required>
+
+            <label for="student-subject">需要輔導的科目：</label>
+            <input type="text" id="student-subject" name="studentSubject" required>
+
+            <label for="student-requirements">特殊要求：</label>
+            <textarea id="student-requirements" name="studentRequirements" rows="4"></textarea>
+
+            <button type="submit">提交</button>
+        </form>
+    </section>
+</div>
+
+<!-- 簡單的JavaScript處理表單提交 -->
+<script>
+    document.getElementById('teacher-registration').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('導師資料已提交');
+        // 這裡可以添加將資料發送到服務器的代碼
+    });
+
+    document.getElementById('student-registration').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('學生資料已提交');
+        // 這裡可以添加將資料發送到服務器的代碼
+    });
+</script>
+
+</body>
+</html>
